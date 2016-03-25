@@ -8,14 +8,54 @@
 
 import UIKit
 
+protocol MyViewDataSource {
+	var titleString: String { get }
+}
+
 class MyView: UIView {
-
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
-    }
-    */
-
+	
+	var dataSource: MyViewDataSource?
+	
+	let titleLabel: UILabel
+	
+	init() {
+		
+		self.titleLabel = UILabel()
+		
+		super.init(frame: .zero)
+		
+		self.backgroundColor = .whiteColor()
+		
+		self.titleLabel.frame = CGRect(origin: .zero, size: self.frame.size)
+		self.addSubview(self.titleLabel)
+		self.titleLabel.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+		
+	}
+	
+	required init?(coder aDecoder: NSCoder) {
+		
+		self.titleLabel = UILabel()
+		
+		super.init(coder: aDecoder)
+		
+		self.titleLabel.frame = CGRect(origin: .zero, size: self.frame.size)
+		self.addSubview(self.titleLabel)
+		self.titleLabel.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+		
+	}
+	
+	override func didMoveToSuperview() {
+		
+		super.didMoveToSuperview()
+		
+		self.updateView()
+		
+	}
+	
+	func updateView() {
+		
+		self.titleLabel.text = self.dataSource?.titleString
+		
+	}
+	
 }

@@ -8,6 +8,38 @@
 
 import UIKit
 
-class MyModel: NSObject {
+protocol MyModelDelegate {
+	func dataHasUpdated()
+}
 
+class MyModel: NSObject {
+	
+	var delegate: MyModelDelegate?
+	
+	var title: String {
+		didSet {
+			self.delegate?.dataHasUpdated()
+		}
+	}
+	
+	override init() {
+		
+		self.title = "Hello, world!"
+		
+		super.init()
+		
+	}
+	
+	func increaseTitle() {
+		
+		self.title += "!"
+		
+	}
+	
+}
+
+extension MyModel: MyViewDataSource {
+	var titleString: String {
+		return self.title
+	}
 }
