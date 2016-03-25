@@ -14,6 +14,9 @@
 		79DCB3C41CA5A11100F84E69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79DCB3C21CA5A11100F84E69 /* LaunchScreen.storyboard */; };
 		79DCB3CF1CA5A11100F84E69 /* SwiftMVCWithDataSourceModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DCB3CE1CA5A11100F84E69 /* SwiftMVCWithDataSourceModelTests.swift */; };
 		79DCB3DA1CA5A11100F84E69 /* SwiftMVCWithDataSourceModelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DCB3D91CA5A11100F84E69 /* SwiftMVCWithDataSourceModelUITests.swift */; };
+		79DCB3EC1CA5A17B00F84E69 /* MyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DCB3EB1CA5A17B00F84E69 /* MyController.swift */; };
+		79DCB3EE1CA5A18E00F84E69 /* MyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DCB3ED1CA5A18E00F84E69 /* MyModel.swift */; };
+		79DCB3F01CA5A19D00F84E69 /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DCB3EF1CA5A19D00F84E69 /* MyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		79DCB3D51CA5A11100F84E69 /* SwiftMVCWithDataSourceModelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftMVCWithDataSourceModelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79DCB3D91CA5A11100F84E69 /* SwiftMVCWithDataSourceModelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMVCWithDataSourceModelUITests.swift; sourceTree = "<group>"; };
 		79DCB3DB1CA5A11100F84E69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79DCB3EB1CA5A17B00F84E69 /* MyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyController.swift; sourceTree = "<group>"; };
+		79DCB3ED1CA5A18E00F84E69 /* MyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyModel.swift; sourceTree = "<group>"; };
+		79DCB3EF1CA5A19D00F84E69 /* MyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,7 @@
 		79DCB3B81CA5A11100F84E69 /* SwiftMVCWithDataSourceModel */ = {
 			isa = PBXGroup;
 			children = (
+				79DCB3E71CA5A16000F84E69 /* Source */,
 				79DCB3B91CA5A11100F84E69 /* AppDelegate.swift */,
 				79DCB3BB1CA5A11100F84E69 /* ViewController.swift */,
 				79DCB3BD1CA5A11100F84E69 /* Main.storyboard */,
@@ -123,6 +130,40 @@
 				79DCB3DB1CA5A11100F84E69 /* Info.plist */,
 			);
 			path = SwiftMVCWithDataSourceModelUITests;
+			sourceTree = "<group>";
+		};
+		79DCB3E71CA5A16000F84E69 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				79DCB3E81CA5A16000F84E69 /* Controllers */,
+				79DCB3E91CA5A16000F84E69 /* Models */,
+				79DCB3EA1CA5A16000F84E69 /* Views */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		79DCB3E81CA5A16000F84E69 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				79DCB3EB1CA5A17B00F84E69 /* MyController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		79DCB3E91CA5A16000F84E69 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				79DCB3ED1CA5A18E00F84E69 /* MyModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		79DCB3EA1CA5A16000F84E69 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				79DCB3EF1CA5A19D00F84E69 /* MyView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +297,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79DCB3EC1CA5A17B00F84E69 /* MyController.swift in Sources */,
 				79DCB3BC1CA5A11100F84E69 /* ViewController.swift in Sources */,
+				79DCB3F01CA5A19D00F84E69 /* MyView.swift in Sources */,
 				79DCB3BA1CA5A11100F84E69 /* AppDelegate.swift in Sources */,
+				79DCB3EE1CA5A18E00F84E69 /* MyModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
